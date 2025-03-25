@@ -2,4 +2,4 @@
   <div>
     <p>Current Year: ${new Date().getFullYear()}</p>
   </div>
-`;
+`;console.log("Hello Vite!");
