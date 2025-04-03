@@ -1,102 +1,40 @@
-/* Mobile-first approach */
+
+/* Default text for h2 */
+h2::before {
+  content: "Extra Large Devices"; /* Default text */
+}
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
-  body {
-    font-size: var(--font-size-small);
+  h2::before {
+    content: "Mobile devices";
   }
-
-  header h1 {
-    font-size: var(--font-size-large);
-  }
-
-  .container {
-    width: 100%; /* Full width for small screens */
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .flex-container {
-    flex-direction: column; /* Stack items vertically */
-  }
-
 }
 
 /* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  body {
-    font-size: var(--font-size-base);
+  h2::before {
+    content: "Tablet devices";
   }
-
-  header h1 {
-    font-size: var(--font-size-xlarge);
-  }
-
-  .container {
-    width: 95%;
-    padding: 1.5rem;
-  }
-
-  .flex-container {
-    flex-direction: column; /* Stack items vertically */
-  }
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    font-size: var(--font-size-medium);
+  h2::before {
+    content: "Medium devicess";
   }
-
-  header h1 {
-    font-size: var(--font-size-xxlarge);
-  }
-
-  .container {
-    width: 90%;
-    padding: 2rem;
-  }
-
-  .flex-container {
-    flex-direction: column; /* Stack items vertically */
-  }
-
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  body {
-    font-size: var(--font-size-medium);
+  h2::before {
+    content: "Large Devices";
   }
-
-  header h1 {
-    font-size: var(--font-size-xxlarge);
-  }
-
-  .container {
-    width: 85%;
-    padding: 2rem;
-  }
-
-  .flex-container {
-    flex-direction: column; /* Stack items vertically */
-  }
-
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  body {
-    font-size: var(--font-size-medium);
-  }
-
-  header h1 {
-    font-size: var(--font-size-xxlarge);
-  }
-
-  .container {
-    width: 80%;
-    padding: 2rem;
+  h2::before {
+    content: "Extra Large Devices";
   }
 }

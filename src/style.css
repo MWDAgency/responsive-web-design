@@ -9,7 +9,7 @@
 
   --color-light: rgba(255, 255, 255,1);
   --color-dark: rgba(33, 53, 71, 1);
-  background-color: gray;
+
 
   /* Text sizes */
   --font-size-small: 0.875rem; /* 14px */
@@ -44,6 +44,7 @@ body {
   background-color: var(--color-light);
   color: var(--color-dark);
   font-size: var(--font-size-base); /* Default text size */
+  background-color: darkgrey;
 }
 
 /* Headers */
@@ -119,38 +120,69 @@ button:hover {
   background-color: rgba(33, 53, 71, 0.7);
 }
 
-header {
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header, main, footer{
+  display: flex;
   width: 100%; /* Use a percentage for fluid width */
-  max-width: 1200px; /* Add a max width for larger screens */
+  max-width: 1440px; /* Add a max width for larger screens */
   margin: 0 auto; /* Center the header */
+}
+
+header {
+  flex-direction: column;
   background-color: var(--color-dark);
   color: var(--color-light);
   padding: 1rem;
 }
 
 header h1 {
-  font-size: var(--font-size-xlarge);
-  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  font-size: var(--font-size-xxlarge);
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Center items horizontally */
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-light);
+  gap: 1rem; /* Space between items */
 }
 
+/* logo */
+.logo {
+  max-width: 150px; /* Set the maximum width of the image */
+  height: auto; /* Maintain the aspect ratio */
+}
 
-footer {
-  width: 100%; /* Use a percentage for fluid width */
-  max-width: 1200px; /* Add a max width for larger screens */
-  margin: 0 auto; /* Center the header */
-  background-color: var(--color-dark);
-  font-size: var(--font-size-small);
-  color: var(--color-light);
-  padding: 1rem;
-  text-align: center;
+/* Main content */
+main {
+  flex-direction: column;
+  flex: 1; /* Allow main to grow and fill the available space */
+  padding: 2rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+main h2 {
+  font-size: var(--font-size-xlarge);
+  margin-bottom: 1rem;
 }
 
 /* Container */
 .container {
   display: flex;
-  flex-direction: row;
-  width: 90%; /* Use a percentage for fluid width */
-  max-width: 1200px; /* Add a max width for larger screens */
+  flex-direction: column;
+  width: 100%; /* Use a percentage for fluid width */
+
   margin: 0 auto; /* Center the container */
 }
 
@@ -164,7 +196,7 @@ footer {
 }
 
 .box{
-  flex: 1; /* Flex-grow to fill available space */
+  flex: 1 1 250px; /* Flex-grow to fill available space */
   padding: 1rem;
   background-color: var(--color-light);
   border: 1px solid var(--color-dark);
@@ -177,4 +209,27 @@ footer {
 
 
 
+
+
+
+
+
+
+footer {
+  background-color: var(--color-dark);
+  font-size: var(--font-size-small);
+  color: var(--color-light);
+  padding: 1rem;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}
+footer a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 
