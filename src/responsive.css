@@ -6,27 +6,68 @@ h2::before {
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
+    /* header */
+    h1{
+      flex-direction: column;
+      font-size: var(--font-size-medium);
+    }
+
   h2::before {
-    content: "Mobile devices";
+    content: "Mobile Devices";
+  }
+
+  main{
+    padding: 1rem;
+  }
+
+  .container{
+    width: 100%;
+  }
+  
+  .flex-container {
+    flex-direction: column;
   }
 }
 
 /* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  h2::before {
-    content: "Tablet devices";
+  /* header */
+  h1{
+    font-size: var(--font-size-large);
   }
+
+  h2::before {
+    content: "Tablet Devices";
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+  .flex-item {
+    flex: 1 0 auto;
+  }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* header */
+  h1{
+    font-size: var(--font-size-large);
+  }
+
   h2::before {
-    content: "Medium devicess";
+    content: "Medium Devices";
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* header */
+  h1{
+    font-size: var(--font-size-xlarge);
+  }
+
   h2::before {
     content: "Large Devices";
   }
